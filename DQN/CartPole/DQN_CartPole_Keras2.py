@@ -1,4 +1,5 @@
-# -*- coding: utf-8 -*-
+#Based on the code of Keon and Morvan
+
 import random
 import gym
 import numpy as np
@@ -14,7 +15,7 @@ class DQNAgent:
     def __init__(self, state_size, action_size):
         self.state_size = state_size
         self.action_size = action_size
-        self.memory = deque(maxlen=2000)
+        self.memory = deque(maxlen=5000)
         self.gamma = 0.95    # discount rate
         self.epsilon = 1.0  # exploration rate
         self.epsilon_min = 0.01
@@ -68,8 +69,10 @@ if __name__ == "__main__":
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
+    # agent.load("./save/cartpole-dqn.h5")
     done = False
     batch_size = 32
+    total_steps = 0
     num_streaks = 0
 
     for e in range(EPISODES):
@@ -103,7 +106,6 @@ if __name__ == "__main__":
 
         print("hold 199 in:", num_streaks)
 
-        if num_streaks > 20:
-            print("Find the solution in Episode %d . " % episode)
+        if num_streaks > 50:
+            print("Find the solution in Episode %d . " % e)
             break
-
