@@ -57,11 +57,11 @@ class DQNAgent:
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 
-    def load(self, name):
-        self.model.load_weights(name)
+    #def load(self, name):
+    #    self.model.load_weights(name)
 
-    def save(self, name):
-        self.model.save_weights(name)
+    #def save(self, name):
+     #   self.model.save_weights(name)
 
 
 if __name__ == "__main__":
@@ -79,7 +79,7 @@ if __name__ == "__main__":
         state = env.reset()
         state = np.reshape(state, [1, state_size])
         for time in range(500):
-            env.render()
+            #env.render()
             action = agent.act(state)
             next_state, reward, done, _ = env.step(action)
             #reward = reward if not done else -10
@@ -94,7 +94,7 @@ if __name__ == "__main__":
                 agent.replay(batch_size)
 
             state = next_state
-            if done:
+            if done: ## is done: 1.pole angleis more than 12degree. 2.Cart position is more than 2.4 . 3. episode length is greater than 200
                 print("episode: {}/{}, score: {}, e: {:.2}"
                       .format(e, EPISODES, time, agent.epsilon))
                 if (time >= 199):

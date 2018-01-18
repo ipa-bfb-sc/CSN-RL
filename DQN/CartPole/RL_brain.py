@@ -10,6 +10,9 @@ Tensorflow: 1.0
 gym: 0.8.0
 """
 
+
+#fix Q_target
+
 import numpy as np
 import pandas as pd
 import tensorflow as tf
