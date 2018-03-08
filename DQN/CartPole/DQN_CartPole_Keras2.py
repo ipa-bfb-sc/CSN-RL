@@ -1,5 +1,7 @@
 #Based on the code of Keon and Morvan
 
+import timeit
+import h5py
 import random
 import gym
 import numpy as np
@@ -23,8 +25,8 @@ class DQNAgent:
         self.learning_rate = 0.001
         self.model = self._build_model()
 
+    # Neural Net for Deep-Q learning Model
     def _build_model(self):
-        # Neural Net for Deep-Q learning Model
         model = Sequential()
         model.add(Dense(24, input_dim=self.state_size, activation='relu'))
         model.add(Dense(24, activation='relu'))
@@ -57,11 +59,14 @@ class DQNAgent:
         if self.epsilon > self.epsilon_min:
             self.epsilon *= self.epsilon_decay
 
-    #def load(self, name):
-    #    self.model.load_weights(name)
+    def load(self, name):
+        self.model.load_weights(name)
 
-    #def save(self, name):
-     #   self.model.save_weights(name)
+    def save(self, name):
+        self.model.save_weights(name)
+
+    def get_weight(self):
+        return self.model.get_weights()
 
 
 if __name__ == "__main__":
@@ -69,13 +74,16 @@ if __name__ == "__main__":
     state_size = env.observation_space.shape[0]
     action_size = env.action_space.n
     agent = DQNAgent(state_size, action_size)
-    # agent.load("./save/cartpole-dqn.h5")
+    #agent.load("./save/cartpole-dqn.h5")
+    #print("Neural Network weights:" + str(agent.get_weight()))
     done = False
     batch_size = 32
     total_steps = 0
     num_streaks = 0
 
     for e in range(EPISODES):
+        start = timeit.default_timer()
+
         state = env.reset()
         state = np.reshape(state, [1, state_size])
         for time in range(500):
@@ -106,6 +114,12 @@ if __name__ == "__main__":
 
         print("hold 199 in:", num_streaks)
 
-        if num_streaks > 50:
+        if num_streaks >= 20:
+            env.render()
             print("Find the solution in Episode %d . " % e)
+            stop = timeit.default_timer()
+            print(stop - start)
+            agent.save("./save/cartpole-dqn.h5")
+            print("Neural Network weights:" + str(agent.get_weight()))
             break
+

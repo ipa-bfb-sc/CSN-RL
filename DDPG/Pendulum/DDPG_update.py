@@ -38,13 +38,13 @@ class DDPG(object):
         self.a_replace_counter, self.c_replace_counter = 0, 0
 
         self.a_dim, self.s_dim, self.a_bound = a_dim, s_dim, a_bound,
-        self.S = tf.placeholder(tf.float32, [None, s_dim], 's')
-        self.S_ = tf.placeholder(tf.float32, [None, s_dim], 's_')
-        self.R = tf.placeholder(tf.float32, [None, 1], 'r')
+        self.S = tf.placeholder(tf.float32, [None, s_dim], 's') #current state
+        self.S_ = tf.placeholder(tf.float32, [None, s_dim], 's_')   #next state
+        self.R = tf.placeholder(tf.float32, [None, 1], 'r') #reward
 
         with tf.variable_scope('Actor'):        #BUILD ACTOR NN TO GET ACTION OUTPUT
             self.a = self._build_a(self.S, scope='eval', trainable=True)
-            a_ = self._build_a(self.S_, scope='target', trainable=False)
+            a_ = self._build_a(self.S_, scope='target', trainable=False)    #
         with tf.variable_scope('Critic'):       #BUILD CRITIC NN TO GET Q_VALUE OUTPUT
             # assign self.a = a in memory when calculating q for td_error,
             # otherwise the self.a is from Actor when updating Actor
@@ -134,6 +134,8 @@ for i in range(MAX_EPISODES):
         a = np.clip(np.random.normal(a, var), -2, 2)    # add randomness to action selection for exploration
         s_, r, done, info = env.step(a)
 
+
+
         ddpg.store_transition(s, a, r / 10, s_)
 
         if ddpg.pointer > MEMORY_CAPACITY:
@@ -144,5 +146,5 @@ for i in range(MAX_EPISODES):
         ep_reward += r
         if j == MAX_EP_STEPS-1:
             print('Episode:', i, ' Reward: %i' % int(ep_reward), 'Explore: %.2f' % var, )
-            if ep_reward > -300:RENDER = True
+            if ep_reward >= -1:RENDER = True
             break

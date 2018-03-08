@@ -7,7 +7,7 @@
 # reference from: Jaromir Janisch
 # https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/
 
-
+import timeit
 import numpy as np
 import tensorflow as tf
 #The Thread class represents an activity that is run in a separate thread of control.
@@ -20,7 +20,7 @@ from keras import backend as K
 #-- constants
 ENV = 'CartPole-v0'
 
-RUN_TIME = 30
+RUN_TIME = 80
 THREADS = 4		#4 agents
 OPTIMIZERS = 2	#2 optimizers
 THREAD_DELAY = 0.001
@@ -258,7 +258,7 @@ class Environment(threading.Thread):
                 break
 
         print("Total R:", R)
-        print("times without done:", times)
+        #print("times without done:", times)
 
     def run(self):
         while not self.stop_signal:
