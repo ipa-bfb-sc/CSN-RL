@@ -1,3 +1,9 @@
+"""
+Classic cart-pole system implemented by Rich Sutton et al.
+Copied from http://incompleteideas.net/sutton/book/code/pole.c
+permalink: https://perma.cc/C9ZM-652R
+"""
+
 import logging
 import math
 import gym
@@ -7,7 +13,7 @@ import numpy as np
 
 logger = logging.getLogger(__name__)
 
-class PlaneBallEnv(gym.Env):
+class CartPoleEnv(gym.Env):
     metadata = {
         'render.modes': ['human', 'rgb_array'],
         'video.frames_per_second' : 50
@@ -15,42 +21,29 @@ class PlaneBallEnv(gym.Env):
 
     def __init__(self):
         self.gravity = 9.8
-        self.massplane = 1.0
-        self.massball = 0.1
-        self.total_mass = (self.massball + self.massplane)
-        self.length = 2
-        self.max_torque = 2.
-        self.ball_radius = 0.1
-        self.force = 10.0
+        self.masscart = 1.0
+        self.masspole = 0.1
+        self.total_mass = (self.masspole + self.masscart)
+        self.length = 0.5 # actually half the pole's length
+        self.polemass_length = (self.masspole * self.length)
+        self.force_mag = 10.0
         self.tau = 0.02  # seconds between state updates
 
-        # Maximum values for observation
-        self.ball_x = 1
-        self.ball_y = 1
-        self.x_Aplha = 90
-        self.y_Beta = 90
-        self.Alpha_vel = 8
-        self.Beta_vel = 8
-        self.ball_vel = np.finfo(np.float32).max
+        # Angle at which to fail the episode
+        self.theta_threshold_radians = 12 * 2 * math.pi / 360
+        self.x_threshold = 2.4
 
-
+        # Angle limit set to 2 * theta_threshold_radians so failing observation is still within bounds
         high = np.array([
-            self.x_Aplha,
-            self.Alpha_vel,
-            self.y_Beta,
-            self.Beta_vel,
-            self.ball_x,
-            self.ball_y,
-            self.ball_vel])
+            self.x_threshold * 2,
+            np.finfo(np.float32).max,
+            self.theta_threshold_radians * 2,
+            np.finfo(np.float32).max])
 
-        #Action space type: Box(2), Torque around x and y axises.
-        self.action_space = spaces.Box(np.array([-self.max_torque,-self.max_torque]), np.array([self.max_torque,self.max_torque]))
-
-        #Observation space type: Box(7), Alpha, Beta and related angle velocity of plane, ball position and velocity.
+        self.action_space = spaces.Discrete(2)
         self.observation_space = spaces.Box(-high, high)
 
         self._seed()
-        self._reset()
         self.viewer = None
         self.state = None
 
@@ -61,46 +54,24 @@ class PlaneBallEnv(gym.Env):
         return [seed]
 
     def _step(self, action):
-        action_X = np.clip(action, -self.max_torque, self.max_torque)[0]
-        action_Y = np.clip(action, -self.max_torque, self.max_torque)[1]
+        assert self.action_space.contains(action), "%r (%s) invalid"%(action, type(action))
         state = self.state
-        x_alpha, alpha_vel, y_beta, beta_vel, ball_x, ball_y, ball_vel = state
-
-        #moment of inertia
-        I = 5/12*(self.massplane*self.length**2)
-
-        #angular acceleration
-        X_acce = action_X/I
-        Y_acce = action_Y/I
-
-        # Angular velocity = old angular velocity + Angular acceleration* time
-        alpha_vel = alpha_vel + X_acce * self.tau
-        beta_vel = beta_vel + Y_acce * self.tau
-
-        x_alpha = x_alpha + alpha_vel * self.tau
-        y_beta = y_beta + beta_vel * self.tau
-
-        alpha_vel = np.clip(alpha_vel, -8, 8)
-        beta_vel = np.clip(beta_vel, -8, 8)
-
-        #####
-        ball_vel_x = alpha_vel * ball_x
-        ball_vel_y = beta_vel * ball_y
-
-        ball_vel = (ball_vel_x**2 + ball_vel_y**2)**0.5
-
-        ball_x = ball_x + ball_vel_x * self.tau
-        ball_y = ball_y + ball_vel_y * self.tau
-
-
-        self.state = np.array([x_alpha, alpha_vel, y_beta, beta_vel, ball_x, ball_y, ball_vel])
-
-
-        done =  ball_x < -0.5*self.length \
-                or ball_x > 0.5*self.length \
-                or ball_y < -0.5 * self.length \
-                or ball_y > 0.5 * self.length
-
+        x, x_dot, theta, theta_dot = state
+        force = self.force_mag if action==1 else -self.force_mag
+        costheta = math.cos(theta)
+        sintheta = math.sin(theta)
+        temp = (force + self.polemass_length * theta_dot * theta_dot * sintheta) / self.total_mass
+        thetaacc = (self.gravity * sintheta - costheta* temp) / (self.length * (4.0/3.0 - self.masspole * costheta * costheta / self.total_mass))
+        xacc  = temp - self.polemass_length * thetaacc * costheta / self.total_mass
+        x  = x + self.tau * x_dot
+        x_dot = x_dot + self.tau * xacc
+        theta = theta + self.tau * theta_dot
+        theta_dot = theta_dot + self.tau * thetaacc
+        self.state = (x,x_dot,theta,theta_dot)
+        done =  x < -self.x_threshold \
+                or x > self.x_threshold \
+                or theta < -self.theta_threshold_radians \
+                or theta > self.theta_threshold_radians
         done = bool(done)
 
         if not done:
@@ -118,19 +89,10 @@ class PlaneBallEnv(gym.Env):
         return np.array(self.state), reward, done, {}
 
     def _reset(self):
-        high = np.array([
-            self.x_Aplha,
-            self.Alpha_vel,
-            self.y_Beta,
-            self.Beta_vel,
-            self.ball_x,
-            self.ball_y,
-            self.ball_vel])
-        self.state = self.np_random.uniform(low=-high, high=high, size=(7,))
+        self.state = self.np_random.uniform(low=-0.05, high=0.05, size=(4,))
         self.steps_beyond_done = None
         return np.array(self.state)
 
-    '''
     def _render(self, mode='human', close=False):
         if close:
             if self.viewer is not None:
@@ -141,7 +103,7 @@ class PlaneBallEnv(gym.Env):
         screen_width = 600
         screen_height = 400
 
-        world_width = 2
+        world_width = self.x_threshold*2
         scale = screen_width/world_width
         carty = 100 # TOP OF CART
         polewidth = 10.0
@@ -182,4 +144,3 @@ class PlaneBallEnv(gym.Env):
         self.poletrans.set_rotation(-x[2])
 
         return self.viewer.render(return_rgb_array = mode=='rgb_array')
-        '''
