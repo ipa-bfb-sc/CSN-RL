@@ -24,7 +24,7 @@ for _ in range(1000):
 
 '''
 
-episode_count = 400
+episode_count = 5
 max_steps = 60 * 10
 reward = 0
 totalReward = 0
@@ -33,11 +33,16 @@ done = False
 for i in range(episode_count):
     ob = env.reset()
     #env.render()
-
+    print('qqqq')
+    print(env.action_space.high)
     for j in range(max_steps):
+
         action = env.action_space.sample()
+        print(action)
 
         ob, reward, done, _ = env.step(action)
+
+        print(ob)
 
         totalReward += reward
 
@@ -48,5 +53,7 @@ for i in range(episode_count):
             totalReward = 0
             reward = -1.0
             break
-            
+
+
+
 

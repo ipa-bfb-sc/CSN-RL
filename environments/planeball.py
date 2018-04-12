@@ -27,8 +27,8 @@ class PlaneBallEnv(gym.Env):
         # Maximum values for observation
         self.ball_x = 1
         self.ball_y = 1
-        self.x_Aplha = 90
-        self.y_Beta = 90
+        self.x_Aplha = 0.5*np.pi
+        self.y_Beta = 0.5*np.pi
         self.Alpha_vel = 8
         self.Beta_vel = 8
         self.ball_vel = np.finfo(np.float32).max
@@ -65,6 +65,11 @@ class PlaneBallEnv(gym.Env):
         action_Y = np.clip(action, -self.max_torque, self.max_torque)[1]
         state = self.state
         x_alpha, alpha_vel, y_beta, beta_vel, ball_x, ball_y, ball_vel = state
+
+        #degree to radian
+        #x_alpha_rad = x_alpha/2*np.pi
+        #y_beta_rad = y_beta/2*np.pi
+
 
         #moment of inertia
         I = 5/12*(self.massplane*self.length**2)

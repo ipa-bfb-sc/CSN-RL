@@ -30,8 +30,8 @@ if __name__ == "__main__":
         discrete = True
         print('Discrete Action Space')
 
-    agent = DQNAgent(state_size, action_size)
-    #agent.load("./save/cartpole-dqn.h5")
+    agent = DQNAgent(state_size, action_size, action_bound)
+    #agent.load("./CartPole/save/cartpole-dqn.h5")
     #print("Neural Network weights:" + str(agent.get_weight()))
     done = False
     batch_size = 32
@@ -54,8 +54,8 @@ if __name__ == "__main__":
             reward = r1 + r2
             next_state = np.reshape(next_state, [1, state_size])
             agent.remember(state, action, reward, next_state, done)
-            if len(agent.memory) > 1000:
-                #print("memory size:", len(agent.memory))
+            if len(agent.memory) > 50:
+                print("memory :", agent.memory)
                 agent.replay(batch_size)
 
             state = next_state
@@ -76,7 +76,7 @@ if __name__ == "__main__":
             print("Find the solution in Episode %d . " % e)
             stop = timeit.default_timer()
             print(stop - start)
-            agent.save("./save/cartpole-dqn.h5")
+            agent.save("./CartPole/save/cartpole-dqn.h5")
             print("Neural Network weights:" + str(agent.get_weight()))
             break
 

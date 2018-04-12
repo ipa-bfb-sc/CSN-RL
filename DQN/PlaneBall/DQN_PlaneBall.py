@@ -2,14 +2,37 @@
 
 import timeit
 import h5py
-
+import random
+import bisect
 import gym
+from gym.spaces import Discrete, Box
 import numpy as np
 from DQN_Agent import DQNAgent
 
+import environments.planeball as planeball
+
 
 EPISODES = 1000
-ENV_NAME = 'CartPole-v0'
+ENV_NAME = planeball.PlaneBallEnv()
+
+
+
+def cont_to_dis(action):
+    action_discrete = []
+    for i in range(2):
+        section = np.array([-2., -1.5, -1., -0.5, 0, 0.5, 1, 1.5, 2])
+        n = bisect.bisect(section, action[i])
+        x = -2 + 0.5 * n
+        if action[i] - x < 0.25:
+            action_dis = x - 0.5
+        else:
+            action_dis = x
+        action_discrete.append(action_dis)
+
+    action_new = np.array(action_discrete)
+    #print("new action:")
+    #print(action_new)
+    return action_new
 
 
 if __name__ == "__main__":
@@ -30,8 +53,8 @@ if __name__ == "__main__":
         discrete = True
         print('Discrete Action Space')
 
-    agent = DQNAgent(state_size, action_size)
-    #agent.load("./save/cartpole-dqn.h5")
+    agent = DQNAgent(state_size, 81)
+    #agent.load("./PlaneBall/save/planeball-dqn.h5")
     #print("Neural Network weights:" + str(agent.get_weight()))
     done = False
     batch_size = 32
@@ -45,21 +68,28 @@ if __name__ == "__main__":
         state = np.reshape(state, [1, state_size])
         for time in range(500):
             #env.render()
+
             action = agent.act(state)
+
+            if not discrete:
+                # Discrete action value
+                action = cont_to_dis(action)
+
             next_state, reward, done, _ = env.step(action)
+
             #reward = reward if not done else -10
-            x, x_dot, theta, theta_dot = next_state
-            r1 = (env.observation_space.high[0] - abs(x)) / env.observation_space.high[0] - 0.8
-            r2 = (env.observation_space.high[2] - abs(theta)) / env.observation_space.high[2] - 0.5
-            reward = r1 + r2
+
+
             next_state = np.reshape(next_state, [1, state_size])
+
             agent.remember(state, action, reward, next_state, done)
+
             if len(agent.memory) > 1000:
                 #print("memory size:", len(agent.memory))
                 agent.replay(batch_size)
 
             state = next_state
-            if done: ## is done: 1.pole angleis more than 12degree. 2.Cart position is more than 2.4 . 3. episode length is greater than 200
+            if done:
                 print("episode: {}/{}, score: {}, e: {:.2}"
                       .format(e, EPISODES, time, agent.epsilon))
                 if (time >= 199):
@@ -76,7 +106,7 @@ if __name__ == "__main__":
             print("Find the solution in Episode %d . " % e)
             stop = timeit.default_timer()
             print(stop - start)
-            agent.save("./save/cartpole-dqn.h5")
+            agent.save("./PlaneBall/save/planeball-dqn.h5")
             print("Neural Network weights:" + str(agent.get_weight()))
             break
 
