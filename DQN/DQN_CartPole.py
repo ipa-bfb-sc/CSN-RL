@@ -30,7 +30,7 @@ if __name__ == "__main__":
         discrete = True
         print('Discrete Action Space')
 
-    agent = DQNAgent(state_size, action_size, action_bound)
+    agent = DQNAgent(state_size, action_size, action_bound, discrete = discrete)
     #agent.load("./CartPole/save/cartpole-dqn.h5")
     #print("Neural Network weights:" + str(agent.get_weight()))
     done = False
@@ -44,7 +44,7 @@ if __name__ == "__main__":
         state = env.reset()
         state = np.reshape(state, [1, state_size])
         for time in range(500):
-            #env.render()
+            env.render()
             action = agent.act(state)
             next_state, reward, done, _ = env.step(action)
             #reward = reward if not done else -10

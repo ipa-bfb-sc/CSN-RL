@@ -9,7 +9,7 @@ from gym.spaces import Discrete, Box
 import numpy as np
 from DQN_Agent import DQNAgent
 
-import environments.planeball as planeball
+import environments.discrete_planeball as dplaneball
 
 
 EPISODES = 1000
@@ -31,7 +31,7 @@ def cont_to_dis(action):
 
 
 if __name__ == "__main__":
-    env = planeball.PlaneBallEnv()
+    env = dplaneball.DiscretePlaneBallEnv()
     state_size = env.observation_space.shape[0]
 
     # determine continuous or discrete action space

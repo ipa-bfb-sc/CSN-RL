@@ -54,6 +54,16 @@ def cont_to_dis(action):
     return action_new
 
 
+def action_index(self, one_action):
+
+    bb = np.rec.fromarrays(one_action) #
+    x, y = np.meshgrid(np.linspace(-2., 2., 9), np.linspace(-2., 2., 9))
+    ac = np.rec.fromarrays([y, x])
+    ac2 = ac.flatten()
+    p = np.where(ac2 == bb)
+    num = p[0]
+    return num
+
 def one_hot(action, num):
     heat = np.zeros(action.shape + (num,))
     print("heat:")
@@ -108,12 +118,17 @@ if __name__ == "__main__":
         #ac2 = np.reshape(ac, [1, 81])
 
         #nn = bisect.bisect(ac2, bb)
-        p = np.where(ac2==bb)
-        num = p[0]
+
+        cc = list(ac2[2])
+        #p = np.where(ac2==bb)
+        #num = p[0]
+        print(ac)
+        print("ac:")
         print(ac2)
         print("ac2:")
-        print(int(num))
-
+        #print(int(num))
+        print(ac2[2])
+        print(cc[0])
 
 
         #action = np.reshape(action, [1, action_size])

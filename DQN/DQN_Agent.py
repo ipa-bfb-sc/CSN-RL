@@ -101,4 +101,6 @@ class DQNAgent:
 
     def get_weight(self):
         return self.model.get_weights()
+    def get_param(self):
+        return self.gamma, self.learning_rate, self.epsilon, self.epsilon_decay
 
