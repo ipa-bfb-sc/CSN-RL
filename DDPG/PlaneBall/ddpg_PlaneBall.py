@@ -10,16 +10,16 @@ from rl.memory import SequentialMemory
 from rl.random import OrnsteinUhlenbeckProcess
 
 
-import environments.planeball as planeball
+import environments
 
-#ENV_NAME = ccartpole.ContinuousCartPoleEnv()
+ENV_NAME = 'PlaneBall-v0'
 
 
 gym.undo_logger_setup()
 
 
 # Get the environment and extract the number of actions.
-env = planeball.PlaneBallEnv()
+env = gym.make(ENV_NAME)
 np.random.seed(123)
 env.seed(123)
 assert len(env.action_space.shape) == 1

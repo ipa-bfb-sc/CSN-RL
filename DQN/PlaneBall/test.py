@@ -1,7 +1,7 @@
 
 from gym.spaces import Discrete, Box
 import numpy as np
-import environments.planeball as planeball
+import environments.PlaneBall.planeball as planeball
 
 import bisect
 
@@ -129,6 +129,7 @@ if __name__ == "__main__":
         #print(int(num))
         print(ac2[2])
         print(cc[0])
+        print(np.random.seed(123))
 
 
         #action = np.reshape(action, [1, action_size])

@@ -19,7 +19,7 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
         # Launch the simulation with the given launchfile name
         gazebo_env.GazeboEnv.__init__(self, "GazeboCircuit2TurtlebotLidar_v0.launch")
         self.vel_pub = rospy.Publisher('/mobile_base/commands/velocity', Twist, queue_size=5)
-        self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
+        self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty) #Service Definition
         self.pause = rospy.ServiceProxy('/gazebo/pause_physics', Empty)
         self.reset_proxy = rospy.ServiceProxy('/gazebo/reset_simulation', Empty)
 
@@ -76,7 +76,7 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
         data = None
         while data is None:
             try:
-                data = rospy.wait_for_message('/scan', LaserScan, timeout=5)
+                data = rospy.wait_for_message('/scan', LaserScan, timeout=5) #create a new subscription to the topic, receive one message, then unsubscribe.
             except:
                 pass
 
