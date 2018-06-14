@@ -159,6 +159,57 @@ class EpsGreedyQPolicy(Policy):
         return config
 
 
+class EpsDisGreedyQPolicy(Policy):
+    """Implement the epsilon greedy policy
+
+    Eps Greedy policy either:
+
+    - takes a random action with probability epsilon
+    - takes current best action with prob (1 - epsilon)
+    """
+
+    def __init__(self, eps=0.01):
+        super(EpsDisGreedyQPolicy, self).__init__()
+        self.eps = eps
+        self.eps_decay = 0.995
+        self.eps_begin = 1
+        self.randon_action = True
+
+    def select_action(self, q_values):
+        """Return the selected action
+
+        # Arguments
+            q_values (np.ndarray): List of the estimations of Q for each action
+
+        # Returns
+            Selection action
+        """
+        assert q_values.ndim == 1
+        nb_actions = q_values.shape[0]
+
+        if np.random.uniform() < self.eps_begin:
+            action = np.random.random_integers(0, nb_actions - 1)
+            self.randon_action = True
+        else:
+            action = np.argmax(q_values)
+            self.randon_action = False
+
+        if self.eps_begin > self.eps:
+            self.eps_begin *= self.eps_decay
+        return action
+
+    def get_config(self):
+        """Return configurations of EpsGreedyPolicy
+
+        # Returns
+            Dict of config
+        """
+        config = super(EpsDisGreedyQPolicy, self).get_config()
+        config['eps'] = self.eps_begin
+        config['random_action'] = self.randon_action
+        return config
+
+
 class GreedyQPolicy(Policy):
     """Implement the greedy policy
 

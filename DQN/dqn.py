@@ -227,7 +227,10 @@ class DQNAgent(AbstractDQNAgent):
         state = self.memory.get_recent_state(observation)
         q_values = self.compute_q_values(state)
         if self.training:
-            action = self.policy.select_action(q_values=q_values)
+            if self.step > self.nb_steps_warmup:
+                action = self.policy.select_action(q_values=q_values)
+            else:
+                action = np.random.random_integers(0, q_values.shape[0]-1)
         else:
             action = self.test_policy.select_action(q_values=q_values)
 

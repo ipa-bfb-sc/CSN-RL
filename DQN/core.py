@@ -217,6 +217,7 @@ class Agent(object):
 
                     # This episode is finished, report and reset.
                     episode_logs = {
+                        'policy_config': self.get_config()['policy'],
                         'episode_reward': episode_reward,
                         'nb_episode_steps': episode_step,
                         'nb_steps': self.step,

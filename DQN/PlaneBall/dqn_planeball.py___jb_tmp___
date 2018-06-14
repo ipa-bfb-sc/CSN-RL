@@ -51,7 +51,7 @@ print("Saved model to disk!")
 
 memory = SequentialMemory(limit=5000, window_length=1)
 policy1 = BoltzmannQPolicy()
-policy2 = EpsGreedyQPolicy()
+policy2 = EpsGreedyQPolicy(eps=0.01)
 callback1 = FileLogger(filepath='save/history1_{}'.format(timenow), interval=1)
 callback2 = FileLogger(filepath='save/history2_{}'.format(timenow), interval=1)
 callback3 = FileLogger(filepath='save/history3_{}'.format(timenow), interval=1)

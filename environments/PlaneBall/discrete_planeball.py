@@ -23,7 +23,7 @@ class DiscretePlaneBallEnv(gym.Env):
         self.total_mass = (self.massball + self.massplane)
         self.length = 2
         self.max_torque = 2.
-        self.ball_radius = 0.2
+        self.ball_radius = 0.1
         self.force = 10.0
         self.tau = 0.02  # seconds between state updates
 

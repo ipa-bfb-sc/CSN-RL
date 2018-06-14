@@ -24,6 +24,10 @@ print("Loaded model from disk!")
 
 ENV_NAME = 'DiscretePlaneBall-v0'
 env = gym.make(ENV_NAME)
+
+np.random.seed(256)
+env.seed(256)
+
 nb_actions = env.action_space.n
 memory = SequentialMemory(limit=5000, window_length=1)
 policy = BoltzmannQPolicy()

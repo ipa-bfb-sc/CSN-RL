@@ -8,7 +8,7 @@ from keras.optimizers import Adam
 
 #from rl.agents.dqn import DQNAgent
 from DQN.dqn import DQNAgent
-from DQN.policy import BoltzmannQPolicy, EpsGreedyQPolicy
+from DQN.policy import BoltzmannQPolicy, EpsGreedyQPolicy, EpsDisGreedyQPolicy
 from DQN.memory import SequentialMemory
 
 from matplotlib import pyplot
@@ -48,39 +48,45 @@ print("Saved model to disk!")
 # Finally, we configure and compile our agent. You can use every built-in Keras optimizer and
 # even the metrics!
 memory = SequentialMemory(limit=5000, window_length=1)
-policy1 = BoltzmannQPolicy()
+#policy1 = BoltzmannQPolicy()
+policy1 = EpsDisGreedyQPolicy(eps=0.001)
 policy2 = EpsGreedyQPolicy()
 callback1 = FileLogger(filepath='save/history1_{}'.format(timenow), interval=1)
 callback2 = FileLogger(filepath='save/history2_{}'.format(timenow), interval=1)
-callback3 = FileLogger(filepath='save/history3_{}'.format(timenow), interval=1)
-callback4 = FileLogger(filepath='save/history4_{}'.format(timenow), interval=1)
+#callback3 = FileLogger(filepath='save/history3_{}'.format(timenow), interval=1)
+#callback4 = FileLogger(filepath='save/history4_{}'.format(timenow), interval=1)
 
 
 dqn1 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=1000,
                target_model_update=1e-2, policy=policy1)
 dqn1.compile(Adam(lr=1e-3), metrics=['mae'])
-history1 = dqn1.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback1], verbose=2)
+history1 = dqn1.fit(env, nb_epsteps=500, visualize=False, callbacks=[callback1], verbose=2)
 
-dqn2 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=1000,
-               target_model_update=1e-2, policy=policy2)
-dqn2.compile(Adam(lr=1e-3), metrics=['mae'])
-history2 = dqn2.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback2], verbose=2)
+#dqn2 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=100,
+#               target_model_update=1e-2, policy=policy2)
+#dqn2.compile(Adam(lr=1e-3), metrics=['mae'])
+#history2 = dqn2.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback2], verbose=2)
 
-dqn3 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=1000,
-               target_model_update=1e-2, policy=policy1, enable_double_dqn=False)
-dqn3.compile(Adam(lr=1e-3), metrics=['mae'])
-history3 = dqn3.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback3], verbose=2)
+#dqn3 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=100,
+#               target_model_update=1e-2, policy=policy1, enable_double_dqn=False)
+#dqn3.compile(Adam(lr=1e-3), metrics=['mae'])
+#history3 = dqn3.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback3], verbose=2)
 
-dqn4 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=1000,
-               target_model_update=1e-2, policy=policy2, enable_double_dqn=False)
-dqn4.compile(Adam(lr=1e-3), metrics=['mae'])
-history4 = dqn4.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback4], verbose=2)
+#dqn4 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, nb_steps_warmup=100,
+#               target_model_update=1e-2, policy=policy2, enable_double_dqn=False)
+#dqn4.compile(Adam(lr=1e-3), metrics=['mae'])
+#history4 = dqn4.fit(env, nb_epsteps=100, visualize=False, callbacks=[callback4], verbose=2)
 
 print(history1.history.keys())
+print(len(history1.history['policy_config']))
+print(history1.history['policy_config']['config'])
+#pyplot.plot(history1.history['policy_config']['eps'])
+#pyplot.show()
 
 #pyplot.subplot(2, 1, 1)
 #pyplot.plot(history.history['nb_episode_steps'], history.history['episode_reward'])
 
+'''
 pyplot.figure()
 pyplot.subplot(2, 1, 1)
 pyplot.plot(history1.history['episode_reward'], 'r--',history3.history['episode_reward'], 'b--')
@@ -91,14 +97,14 @@ pyplot.plot(history2.history['episode_reward'], 'r', history4.history['episode_r
 pyplot.show()
 
 #pyplot.savefig('save/BoltzmannQPolicy')
-
+'''
 
 
 # After training is done, we save the final weights.
-dqn1.save_weights('save/dqn1_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
-dqn2.save_weights('save/dqn2_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
-dqn3.save_weights('save/dqn3_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
-dqn4.save_weights('save/dqn4_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
+dqn1.save_weights('save/dqn1_{}_weights_test.h5f'.format(ENV_NAME), overwrite=True)
+#dqn2.save_weights('save/dqn2_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
+#dqn3.save_weights('save/dqn3_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
+#dqn4.save_weights('save/dqn4_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
 print('Weights saved!')
 
 
