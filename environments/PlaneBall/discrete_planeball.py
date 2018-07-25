@@ -120,7 +120,7 @@ class DiscretePlaneBallEnv(gym.Env):
 
         if not done:
             if -self.ball_radius <= ball_x <= self.ball_radius and -self.ball_radius <= ball_y <= self.ball_radius:
-                reward = 100
+                reward = 1
             else:
                 reward = -1.0
 

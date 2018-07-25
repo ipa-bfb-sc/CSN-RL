@@ -24,6 +24,8 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
         self.reset_proxy = rospy.ServiceProxy('/gazebo/reset_simulation', Empty)
 
         self.action_space = spaces.Discrete(3) #F,L,R
+        high = np.array([20, 20, 20, 20, 20])
+        self.observation_space = spaces.Box(-high, high)
         self.reward_range = (-np.inf, np.inf)
 
         self._seed()
@@ -40,10 +42,12 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
                 elif np.isnan(data.ranges[i]):
                     discretized_ranges.append(0)
                 else:
-                    discretized_ranges.append(int(data.ranges[i]))
+                    rr=float("{0:.1f}".format(data.ranges[i]))
+                    discretized_ranges.append(rr)
             if (min_range > data.ranges[i] > 0):
                 done = True
-        return discretized_ranges,done
+        nrange = np.array(discretized_ranges)
+        return nrange,done
 
     def _seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -93,7 +97,10 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
             if action == 0:
                 reward = 5
             else:
-                reward = 1
+                if action==3:
+                    reward = -1
+                else:
+                    reward = 1
         else:
             reward = -200
 
@@ -132,6 +139,6 @@ class GazeboCircuit2TurtlebotLidarEnv(gazebo_env.GazeboEnv):
         except (rospy.ServiceException) as e:
             print ("/gazebo/pause_physics service call failed")
 
-        state = self.discretize_observation(data,5)
+        state, done = self.discretize_observation(data,5)
 
         return state

@@ -5,19 +5,19 @@ import keras.backend as K
 from keras.models import Model
 from keras.layers import Lambda, Input, Layer, Dense
 
-from DQN.core import Agent
-from DQN.policy import EpsGreedyQPolicy, GreedyQPolicy
-from rl.util import *
+from common.core import Agent
+from common.policy import EpsGreedyQPolicy, GreedyQPolicy
+from common.util import *
 
 
-def mean_q(y_true, y_pred):
-    return K.mean(K.max(y_pred, axis=-1))
+def mean_q(y_true, y_predd):
+    return K.mean(K.max(y_predd, axis=-1))
 
 
 class AbstractDQNAgent(Agent):
     """Write me
     """
-    def __init__(self, nb_actions, memory, gamma=.99, batch_size=32, nb_steps_warmup=1000,
+    def __init__(self, nb_actions, memory, gamma=.99, batch_size=64, nb_steps_warmup=1000,
                  train_interval=1, memory_interval=1, target_model_update=10000,
                  delta_range=None, delta_clip=np.inf, custom_model_objects={}, **kwargs):
         super(AbstractDQNAgent, self).__init__(**kwargs)
@@ -67,6 +67,7 @@ class AbstractDQNAgent(Agent):
 
     def compute_q_values(self, state):
         q_values = self.compute_batch_q_values([state]).flatten()
+        #q_values = self.model.predict(state)
         assert q_values.shape == (self.nb_actions,)
         return q_values
 
@@ -180,7 +181,7 @@ class DQNAgent(AbstractDQNAgent):
 
         def clipped_masked_error(args):
             y_true, y_pred, mask = args
-            loss = huber_loss(y_true, y_pred, self.delta_clip)
+            loss = huber_loss(y_true, y_pred, self.delta_clip) #if self.delta_clip is inf, return: 0.5 * K.square(y_true-y_pred)
             loss *= mask  # apply element-wise mask
             return K.sum(loss, axis=-1)
 
@@ -188,20 +189,21 @@ class DQNAgent(AbstractDQNAgent):
         # ever want to update the Q values for a certain action. The way we achieve this is by
         # using a custom Lambda layer that computes the loss. This gives us the necessary flexibility
         # to mask out certain parameters by passing in multiple inputs to the Lambda layer.
-        y_pred = self.model.output
+        y_pred = self.model.output  # out_put name is the last layer's name, like:"activation_4"
         y_true = Input(name='y_true', shape=(self.nb_actions,))
         mask = Input(name='mask', shape=(self.nb_actions,))
-        loss_out = Lambda(clipped_masked_error, output_shape=(1,), name='loss')([y_true, y_pred, mask])
+        loss_out = Lambda(clipped_masked_error, output_shape=(1,), name='losstest')([y_true, y_pred, mask])
         ins = [self.model.input] if type(self.model.input) is not list else self.model.input
         trainable_model = Model(inputs=ins + [y_true, mask], outputs=[loss_out, y_pred])
         assert len(trainable_model.output_names) == 2
-        combined_metrics = {trainable_model.output_names[1]: metrics}
+        combined_metrics = {trainable_model.output_names[1]: metrics} #o specify different metrics for different outputs of a multi-output model
         losses = [
             lambda y_true, y_pred: y_pred,  # loss is computed in Lambda layer
             lambda y_true, y_pred: K.zeros_like(y_pred),  # we only include this for the metrics
         ]
         trainable_model.compile(optimizer=optimizer, loss=losses, metrics=combined_metrics)
         self.trainable_model = trainable_model
+        #Metrics names: ['loss', 'losstest_loss', 'activation_4_loss', 'activation_4_mean_absolute_error', 'activation_4_mean_q']
 
         self.compiled = True
 
@@ -225,7 +227,11 @@ class DQNAgent(AbstractDQNAgent):
     def forward(self, observation):
         # Select an action.
         state = self.memory.get_recent_state(observation)
+        #state = np.reshape(observation, [1, len(observation)])
         q_values = self.compute_q_values(state)
+
+        #if self.episode > 2500:
+        #    self.training = False
         if self.training:
             if self.step > self.nb_steps_warmup:
                 action = self.policy.select_action(q_values=q_values)
@@ -313,21 +319,22 @@ class DQNAgent(AbstractDQNAgent):
             # Set discounted reward to zero for all states that were terminal.
             discounted_reward_batch *= terminal1_batch
             assert discounted_reward_batch.shape == reward_batch.shape
-            Rs = reward_batch + discounted_reward_batch
+            Rs = reward_batch + discounted_reward_batch # shape=(self.batch_size), this is Q_target
             for idx, (target, mask, R, action) in enumerate(zip(targets, masks, Rs, action_batch)):
                 target[action] = R  # update action with estimated accumulated reward
-                dummy_targets[idx] = R
+                dummy_targets[idx] = R  ## shape = (self.batch_size)
                 mask[action] = 1.  # enable loss for this specific action
-            targets = np.array(targets).astype('float32')
-            masks = np.array(masks).astype('float32')
+            targets = np.array(targets).astype('float32') # shape = (self.batch_size, self.nb_actions)
+            masks = np.array(masks).astype('float32')  # shape = (self.batch_size, self.nb_actions)
 
             # Finally, perform a single update on the entire batch. We use a dummy target since
             # the actual loss is computed in a Lambda layer that needs more complex input. However,
             # it is still useful to know the actual target to compute metrics properly.
-            ins = [state0_batch] if type(self.model.input) is not list else state0_batch
-            metrics = self.trainable_model.train_on_batch(ins + [targets, masks], [dummy_targets, targets])
-            metrics = [metric for idx, metric in enumerate(metrics) if idx not in (1, 2)]  # throw away individual losses
-            metrics += self.policy.metrics
+            ins = [state0_batch] if type(self.model.input) is not list else state0_batch  ## shape = (self.batch_size,)
+            metrics = self.trainable_model.train_on_batch(ins + [targets, masks], [dummy_targets, targets]) #metrics includes return loss and metrics, only one tuple value
+            #Metrics names: ['loss', 'losstest_loss', 'activation_4_loss', 'activation_4_mean_absolute_error', 'activation_4_mean_q']
+            metrics = [metric for idx, metric in enumerate(metrics) if idx not in (1,2)]  # throw away individual losses
+            metrics += self.policy.metrics  # add Policy metrics, no use for most policies
             if self.processor is not None:
                 metrics += self.processor.metrics
 
@@ -345,7 +352,7 @@ class DQNAgent(AbstractDQNAgent):
         # Throw away individual losses and replace output name since this is hidden from the user.
         assert len(self.trainable_model.output_names) == 2
         dummy_output_name = self.trainable_model.output_names[1]
-        model_metrics = [name for idx, name in enumerate(self.trainable_model.metrics_names) if idx not in (1, 2)]
+        model_metrics = [name for idx, name in enumerate(self.trainable_model.metrics_names) if idx not in (1,2)]
         model_metrics = [name.replace(dummy_output_name + '_', '') for name in model_metrics]
 
         names = model_metrics + self.policy.metrics_names[:]

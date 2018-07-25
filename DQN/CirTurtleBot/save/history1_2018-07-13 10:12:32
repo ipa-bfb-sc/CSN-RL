@@ -1,0 +1,1 @@
+{"duration": [2.9792658970000048], "episode_reward": [[-189.50999450683594]], "loss": [NaN], "train_end_episode": [false], "nb_episode_steps": [10], "episode": [0], "nb_steps": [10], "mean_q": [NaN], "mean_absolute_error": [NaN]}
