@@ -109,30 +109,19 @@ class PlaneBallEnv(gym.Env):
         done = bool(done)
 
         if not done:
-            reward = 1.0
-        elif self.steps_beyond_done is None:
-            # Pole just fell!
-            self.steps_beyond_done = 0
-            reward = 1.0
+            if -self.ball_radius <= ball_x <= self.ball_radius and -self.ball_radius <= ball_y <= self.ball_radius:
+                reward = 1.0
+            else:
+                reward = -1.0
         else:
-            if self.steps_beyond_done == 0:
-                logger.warning("You are calling 'step()' even though this environment has already returned done = True. You should always call 'reset()' once you receive 'done = True' -- any further steps are undefined behavior.")
-            self.steps_beyond_done += 1
-            reward = 0.0
+            reward = -100.0
 
         return np.array(self.state), reward, done, {}
 
     def _reset(self):
-        high = np.array([
-            self.x_Aplha,
-            self.Alpha_vel,
-            self.y_Beta,
-            self.Beta_vel,
-            self.ball_x,
-            self.ball_y,
-            self.ball_vel])
-        self.state = self.np_random.uniform(low=-high, high=high, size=(7,))
-        self.steps_beyond_done = None
+
+        self.state = np.array([self.np_random.uniform(low=-self.x_Aplha, high=self.x_Aplha), 0, self.np_random.uniform(low=-self.y_Beta, high=self.y_Beta), 0, self.np_random.uniform(low=-self.ball_x, high=self.ball_x), self.np_random.uniform(low=-self.ball_y, high=self.ball_y), 0])
+
         return np.array(self.state)
 
     '''

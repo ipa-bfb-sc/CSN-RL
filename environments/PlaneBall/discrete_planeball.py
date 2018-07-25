@@ -30,10 +30,10 @@ class DiscretePlaneBallEnv(gym.Env):
         # Maximum values for observation
         self.ball_x = 1
         self.ball_y = 1
-        self.x_Aplha = 0.5*np.pi
-        self.y_Beta = 0.5*np.pi
-        self.Alpha_vel = 8
-        self.Beta_vel = 8
+        self.x_Aplha = 0.5*np.pi # rad
+        self.y_Beta = 0.5*np.pi # rad
+        self.Alpha_vel = 8 # rad/s
+        self.Beta_vel = 8 # rad/s
         self.ball_vel = np.finfo(np.float32).max
 
 
@@ -56,7 +56,7 @@ class DiscretePlaneBallEnv(gym.Env):
         self.viewer = None
         self.state = None
 
-        self.steps_beyond_done = None
+        #self.steps_beyond_done = None
 
     def _seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -78,11 +78,6 @@ class DiscretePlaneBallEnv(gym.Env):
         action_Y = torque_xy[1]
         state = self.state
         x_alpha, alpha_vel, y_beta, beta_vel, ball_x, ball_y, ball_vel = state
-
-        #degree to radian
-        #x_alpha_rad = x_alpha/2*np.pi
-        #y_beta_rad = y_beta/2*np.pi
-
 
         #moment of inertia
         I = 5/12*(self.massplane*self.length**2)
@@ -119,23 +114,23 @@ class DiscretePlaneBallEnv(gym.Env):
                 or ball_y < -0.5 * self.length \
                 or ball_y > 0.5 * self.length
 
+
+
         done = bool(done)
 
         if not done:
-            reward = 1.0
-        elif self.steps_beyond_done is None:
-            # Pole just fell!
-            self.steps_beyond_done = 0
-            reward = 1.0
+            if -self.ball_radius <= ball_x <= self.ball_radius and -self.ball_radius <= ball_y <= self.ball_radius:
+                reward = 1
+            else:
+                reward = -1.0
+
         else:
-            if self.steps_beyond_done == 0:
-                logger.warning("You are calling 'step()' even though this environment has already returned done = True. You should always call 'reset()' once you receive 'done = True' -- any further steps are undefined behavior.")
-            self.steps_beyond_done += 1
-            reward = 0.0
+            reward = -100
 
         return np.array(self.state), reward, done, {}
 
     def _reset(self):
+        '''
         high = np.array([
             self.x_Aplha,
             self.Alpha_vel,
@@ -145,6 +140,8 @@ class DiscretePlaneBallEnv(gym.Env):
             self.ball_y,
             self.ball_vel])
         self.state = self.np_random.uniform(low=-high, high=high, size=(7,))
-        self.steps_beyond_done = None
+        '''
+        self.state = np.array([self.np_random.uniform(low=-self.x_Aplha, high=self.x_Aplha), 0, self.np_random.uniform(low=-self.y_Beta, high=self.y_Beta), 0, self.np_random.uniform(low=-self.ball_x, high=self.ball_x), self.np_random.uniform(low=-self.ball_y, high=self.ball_y), 0])
+        #self.steps_beyond_done = None
         return np.array(self.state)
 

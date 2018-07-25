@@ -22,8 +22,16 @@ class GazeboCircuit2TurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
         self.unpause = rospy.ServiceProxy('/gazebo/unpause_physics', Empty)
         self.pause = rospy.ServiceProxy('/gazebo/pause_physics', Empty)
         self.reset_proxy = rospy.ServiceProxy('/gazebo/reset_simulation', Empty)
+        #self.min_action=-0.33
+        #self.max_action=0.33
+        self.min_action = 0
+        self.max_action = 20
 
         self.reward_range = (-np.inf, np.inf)
+        high = np.linspace(20, 20, num=20)
+        self.observation_space = spaces.Box(-high, high)
+        self.action_space = spaces.Box(self.min_action, self.max_action, shape = (1,))
+
 
         self._seed()
 
@@ -33,7 +41,7 @@ class GazeboCircuit2TurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
         for i, item in enumerate(data.ranges):
             if (min_range > data.ranges[i] > 0):
                 done = True
-        return data.ranges,done
+        return np.array(data.ranges),done
 
     def _seed(self, seed=None):
         self.np_random, seed = seeding.np_random(seed)
@@ -47,11 +55,13 @@ class GazeboCircuit2TurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
             print ("/gazebo/unpause_physics service call failed")
 
         max_ang_speed = 0.3
-        ang_vel = (action-10)*max_ang_speed*0.1 #from (-0.33 to + 0.33)
-
+        ang_vell = (action-10)*max_ang_speed*0.1 #from (-0.33 to + 0.33)
+        ang_vel = ang_vell[0]
         vel_cmd = Twist()
         vel_cmd.linear.x = 0.2
+        #vel_cmd.angular.z = action[0]
         vel_cmd.angular.z = ang_vel
+
         self.vel_pub.publish(vel_cmd)
 
         data = None
@@ -71,13 +81,21 @@ class GazeboCircuit2TurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
         state,done = self.calculate_observation(data)
 
         if not done:
+            #if -0.05 < action < 0.05:
+            #    reward = 5
+            #else:
+            #    reward = 1
             # Straight reward = 5, Max angle reward = 0.5
-            reward = round(15*(max_ang_speed - abs(ang_vel) +0.0335), 2)
+            #reward = 15*(max_ang_speed - abs(ang_vel) +0.0335)
+            #reward = 1
+            #reward = np.around(15*(max_ang_speed - abs(action[0]) +0.0335), 2)
+            reward = np.around(15*(max_ang_speed - abs(ang_vel) +0.0335), 2)
+
             # print ("Action : "+str(action)+" Ang_vel : "+str(ang_vel)+" reward="+str(reward))
         else:
             reward = -200
 
-        return np.asarray(state), reward, done, {}
+        return state, reward, done, {}
 
     def _reset(self):
         # Resets the state of the environment and returns an initial observation.
@@ -112,4 +130,4 @@ class GazeboCircuit2TurtlebotLidarNnEnv(gazebo_env.GazeboEnv):
 
         state,done = self.calculate_observation(data)
 
-        return np.asarray(state)
+        return state

@@ -58,7 +58,9 @@ class ContinuousCartPoleEnv(gym.Env):
     def _step(self, action):
         state = self.state
         x, x_dot, theta, theta_dot = state
-        force = min(max(self.force_mag * action[0], -self.force_mag), self.force_mag)
+        #force = min(max(self.force_mag * action[0], -self.force_mag), self.force_mag)
+        force = np.clip(action*self.force_mag, -self.force_mag, self.force_mag)[0]
+        self.u = force
         costheta = math.cos(theta)
         sintheta = math.sin(theta)
         temp = (force + self.polemass_length * theta_dot * theta_dot * sintheta) / self.total_mass
@@ -92,6 +94,7 @@ class ContinuousCartPoleEnv(gym.Env):
     def _reset(self):
         self.state = self.np_random.uniform(low=-0.05, high=0.05, size=(4,))
         self.steps_beyond_done = None
+        self.u = None
         return np.array(self.state)
 
     def _render(self, mode='human', close=False):
