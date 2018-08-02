@@ -3,78 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="efb01338-0aaa-4d9b-a0d9-bbb2ce6436a4" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/A3C/CartPole/A3C.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/A3C/CartPole/A3C_discrete_action.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/A3C/CartPole/AC_CartPole.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/A3C/PlaneBall/a3c_planeball.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/A3C/a3c.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CartPole/DDPG" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CartPole/DDPG_CartPole.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CartPole/ddpg_ContinuousCartPole.py" afterPath="$PROJECT_DIR$/DDPG/CartPole/ddpg_ContinuousCartPole.py" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CartPole/save/ddpg_ContinuousCartpole_weights_actor.h5f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CartPole/save/ddpg_ContinuousCartpole_weights_critic.h5f" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/PlaneBall/ddpg_PlaneBall.py" afterPath="$PROJECT_DIR$/DDPG/PlaneBall/ddpg_PlaneBall.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/dqn_cartpole.py" afterPath="$PROJECT_DIR$/DQN/CartPole/dqn_cartpole.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/policy_comparison.py" afterPath="$PROJECT_DIR$/DQN/CartPole/policy_comparison.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/BoltzmannQPolicy.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/NNmodel1.json" afterPath="$PROJECT_DIR$/DQN/CartPole/save/NNmodel1.json" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/dqn2_CartPole-v0_weights.h5f" afterPath="$PROJECT_DIR$/DQN/CartPole/save/dqn2_CartPole-v0_weights.h5f" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/history1_2018-06-13 12:34:33" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/history1_2018-06-13 14:11:42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/history1_2018-06-13 14:30:07" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/history1_2018-06-14 11:33:58" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/pics/DQN-NN.png" afterPath="$PROJECT_DIR$/DQN/CartPole/save/pics/DQN-NN.png" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/pics/exp1.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CartPole/save/pics/exp2.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/circuit2_turtlebot_lidar_dqn.py" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/circuit2_turtlebot_lidar_dqn.py" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Actor.json" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Actor.json" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Critic.json" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Critic.json" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history2_2018-07-20 15:26:54" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history3_2018-07-20 22:36:26" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history3_2018-07-20 23:39:41" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history4_2018-07-21 00:03:40" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DDPG/movan_ddpg.py" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" />
       <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/DQN_PlaneBall.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/dqn_planeball.py" afterPath="$PROJECT_DIR$/DQN/PlaneBall/dqn_planeball.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/dqn_planeball.py___jb_tmp___" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/NNmodel1.json" afterPath="$PROJECT_DIR$/DQN/PlaneBall/save/NNmodel1.json" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/dqn4_DiscretePlaneBall-v0_weights.h5f" afterPath="$PROJECT_DIR$/DQN/PlaneBall/save/dqn4_DiscretePlaneBall-v0_weights.h5f" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 09:50:41" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 11:24:25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 12:08:42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 13:00:31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 13:36:28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 13:37:19" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history1_2018-06-12 13:41:02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 11:24:25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 12:08:42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 13:00:31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 13:36:28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 13:37:19" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history2_2018-06-12 13:41:02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 11:24:25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 12:08:42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 13:00:31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 13:36:28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 13:37:19" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history3_2018-06-12 13:41:02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 11:24:25" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 12:08:42" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 13:00:31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 13:36:28" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 13:41:02" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 13:58:07" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 14:01:58" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/PlaneBall/save/history4_2018-06-12 14:22:05" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/a.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/callbacks.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/circuit2_turtlebot_lidar_dqn.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/core.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/dqn.py" afterPath="$PROJECT_DIR$/DQN/dqn.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/memory.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/policy.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Policy_Gradient_CartPole/2.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Policy_Gradient_CartPole/PG_CartPole_keras.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/environments/CartPole/continuous_cartpole.py" afterPath="$PROJECT_DIR$/environments/CartPole/continuous_cartpole.py" />
-      <change beforePath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar.py" afterPath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar.py" />
+      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/NNmodel1.json" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/save/NNmodel1.json" />
+      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/nhistory3_2018-07-19 21:56:31" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/nhistory3_2018-07-19 22:21:33" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/pics/ddpg_cirturtlebot_reward.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py" afterPath="$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py" />
+      <change beforePath="$PROJECT_DIR$/common/core.py" afterPath="$PROJECT_DIR$/common/core.py" />
       <change beforePath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" afterPath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" />
-      <change beforePath="$PROJECT_DIR$/environments/PlaneBall/discrete_planeball.py" afterPath="$PROJECT_DIR$/environments/PlaneBall/discrete_planeball.py" />
-      <change beforePath="$PROJECT_DIR$/environments/PlaneBall/planeball.py" afterPath="$PROJECT_DIR$/environments/PlaneBall/planeball.py" />
-      <change beforePath="$PROJECT_DIR$/environments/__init__.py" afterPath="$PROJECT_DIR$/environments/__init__.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -99,7 +44,7 @@
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole11.coverage" NAME="dqn_cartpole11 Coverage Results" MODIFIED="1529657329974" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball4.coverage" NAME="dqn_planeball4 Coverage Results" MODIFIED="1529997545914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$circuit2_turtlebot_lidar_dqn__1_.coverage" NAME="circuit2_turtlebot_lidar_dqn (1) Coverage Results" MODIFIED="1529680486910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/gym-gazebo/examples/turtlebot" />
-    <SUITE FILE_PATH="coverage/Thesis_RL$comparison__1_.coverage" NAME="comparison (1) Coverage Results" MODIFIED="1532505019328" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/CartPole" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$comparison__1_.coverage" NAME="comparison (1) Coverage Results" MODIFIED="1532634986772" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg_pendulum.coverage" NAME="ddpg_pendulum Coverage Results" MODIFIED="1531240329258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/keras-rl/examples" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole7.coverage" NAME="dqn_cartpole7 Coverage Results" MODIFIED="1529499577108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$target_net_comparison.coverage" NAME="target_net_comparison Coverage Results" MODIFIED="1531934577942" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
@@ -115,13 +60,16 @@
     <SUITE FILE_PATH="coverage/Thesis_RL$policy_comparison.coverage" NAME="policy_comparison Coverage Results" MODIFIED="1530028361471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole3.coverage" NAME="dqn_cartpole3 Coverage Results" MODIFIED="1529567046198" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cirturtlebot.coverage" NAME="dqn_cirturtlebot Coverage Results" MODIFIED="1529680042346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CirTurtleBot" />
+    <SUITE FILE_PATH="coverage/CSN_RL$cirturtlebot_comparison.coverage" NAME="cirturtlebot-comparison Coverage Results" MODIFIED="1533236804157" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/method_comparison" />
     <SUITE FILE_PATH="coverage/Thesis_RL$DQN_CirTurtleBot.coverage" NAME="DQN_CirTurtleBot Coverage Results" MODIFIED="1523528296874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole8.coverage" NAME="dqn_cartpole8 Coverage Results" MODIFIED="1529499688760" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole__1_.coverage" NAME="dqn_cartpole (1) Coverage Results" MODIFIED="1529483078179" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole10.coverage" NAME="dqn_cartpole10 Coverage Results" MODIFIED="1529657256464" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball5.coverage" NAME="dqn_planeball5 Coverage Results" MODIFIED="1529938519573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$dppo_CirTurtleBot.coverage" NAME="dppo_CirTurtleBot Coverage Results" MODIFIED="1532615057269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball3.coverage" NAME="dqn_planeball3 Coverage Results" MODIFIED="1529938495112" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$comparison__3_.coverage" NAME="comparison (3) Coverage Results" MODIFIED="1532515759404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/PlaneBall" />
+    <SUITE FILE_PATH="coverage/CSN_RL$comparison.coverage" NAME="comparison Coverage Results" MODIFIED="1533236260003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$a3c_planeball.coverage" NAME="a3c_planeball Coverage Results" MODIFIED="1527255123985" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/A3C/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$batch_size_comparison__1_.coverage" NAME="batch_size_comparison (1) Coverage Results" MODIFIED="1531121089460" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg_PlaneBall.coverage" NAME="ddpg_PlaneBall Coverage Results" MODIFIED="1531865469869" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/PlaneBall" />
@@ -148,23 +96,24 @@
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg_ContinuousCartPole2.coverage" NAME="ddpg_ContinuousCartPole2 Coverage Results" MODIFIED="1531834107000" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$load_weights.coverage" NAME="load_weights Coverage Results" MODIFIED="1531900410989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$DQN_CartPole_Keras2__1_.coverage" NAME="DQN_CartPole_Keras2 (1) Coverage Results" MODIFIED="1523354219534" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$cirturtlebot_comparison.coverage" NAME="cirturtlebot-comparison Coverage Results" MODIFIED="1533033682316" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/method_comparison" />
     <SUITE FILE_PATH="coverage/Thesis_RL$planeball.coverage" NAME="planeball Coverage Results" MODIFIED="1521470136308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/environments" />
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg2.coverage" NAME="ddpg2 Coverage Results" MODIFIED="1531298137609" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG" />
     <SUITE FILE_PATH="coverage/Thesis_RL$planeball_comparison.coverage" NAME="planeball-comparison Coverage Results" MODIFIED="1532521684574" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/method_comparison" />
     <SUITE FILE_PATH="coverage/Thesis_RL$CartPole3D_v0.coverage" NAME="CartPole3D-v0 Coverage Results" MODIFIED="1520864889865" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/PGE/pge" />
     <SUITE FILE_PATH="coverage/Thesis_RL$gazebo_circuit2_turtlebot_lidar.coverage" NAME="gazebo_circuit2_turtlebot_lidar Coverage Results" MODIFIED="1521713628752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/gym-gazebo/gym_gazebo/envs/turtlebot" />
-    <SUITE FILE_PATH="coverage/Thesis_RL$test.coverage" NAME="test Coverage Results" MODIFIED="1528098862889" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$batch_size_comparison.coverage" NAME="batch_size_comparison Coverage Results" MODIFIED="1530537036933" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$cartpole_comparison.coverage" NAME="cartpole-comparison Coverage Results" MODIFIED="1532505154099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/method_comparison" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$test.coverage" NAME="test Coverage Results" MODIFIED="1532973935469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$discounted_rate_comparison.coverage" NAME="discounted_rate_comparison Coverage Results" MODIFIED="1530028328668" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball.coverage" NAME="dqn_planeball Coverage Results" MODIFIED="1531925496548" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg_ContinuousCartPole__1_.coverage" NAME="ddpg_ContinuousCartPole (1) Coverage Results" MODIFIED="1531054713186" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/vinci/rl/agents" />
     <SUITE FILE_PATH="coverage/Thesis_RL$ddpg.coverage" NAME="ddpg Coverage Results" MODIFIED="1531214167046" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/cartpole-deep-policy-gradient/ddpg" />
     <SUITE FILE_PATH="coverage/Thesis_RL$gazebo_env.coverage" NAME="gazebo_env Coverage Results" MODIFIED="1521713615100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/gym-gazebo/gym_gazebo/envs" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball7.coverage" NAME="dqn_planeball7 Coverage Results" MODIFIED="1530001308025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
-    <SUITE FILE_PATH="coverage/Thesis_RL$comparison__2_.coverage" NAME="comparison (2) Coverage Results" MODIFIED="1532505130313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$comparison__2_.coverage" NAME="comparison (2) Coverage Results" MODIFIED="1533031432162" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DDPG/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dppo_CartPole3.coverage" NAME="dppo_CartPole3 Coverage Results" MODIFIED="1532357681622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/CartPole" />
-    <SUITE FILE_PATH="coverage/Thesis_RL$comparison.coverage" NAME="comparison Coverage Results" MODIFIED="1532358284910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/CartPole" />
+    <SUITE FILE_PATH="coverage/Thesis_RL$comparison.coverage" NAME="comparison Coverage Results" MODIFIED="1533218009950" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/PPO/CirTurtleBot" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_cartpole5.coverage" NAME="dqn_cartpole5 Coverage Results" MODIFIED="1529497684388" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/CartPole" />
     <SUITE FILE_PATH="coverage/Thesis_RL$dqn_planeball8.coverage" NAME="dqn_planeball8 Coverage Results" MODIFIED="1530087898500" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN/PlaneBall" />
     <SUITE FILE_PATH="coverage/Thesis_RL$DQN_PlaneBall__1_.coverage" NAME="DQN_PlaneBall (1) Coverage Results" MODIFIED="1527169470718" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/DQN" />
@@ -176,18 +125,18 @@
     <favorites_list name="Thesis-RL" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4291105">
+    <splitter split-orientation="horizontal" split-proportion="0.509434">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="core.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/common/core.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="285" column="33" lean-forward="false" selection-start-line="285" selection-start-column="8" selection-end-line="285" selection-end-column="33" />
+                <state relative-caret-position="4176">
+                  <caret line="250" column="48" lean-forward="false" selection-start-line="250" selection-start-column="48" selection-end-line="250" selection-end-column="48" />
                   <folding>
                     <element signature="e#24#39#0" expanded="true" />
                     <element signature="e#7245#8479#0" expanded="false" />
-                    <element signature="e#13668#21487#0" expanded="false" />
+                    <element signature="e#13669#21488#0" expanded="false" />
                   </folding>
                 </state>
               </provider>
@@ -196,8 +145,8 @@
           <file leaf-file-name="callbacks.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/common/callbacks.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1837">
-                  <caret line="188" column="29" lean-forward="false" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
+                <state relative-caret-position="6462">
+                  <caret line="370" column="28" lean-forward="false" selection-start-line="370" selection-start-column="28" selection-end-line="370" selection-end-column="28" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
                   </folding>
@@ -208,7 +157,7 @@
           <file leaf-file-name="ddpg.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/DDPG/ddpg.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="234">
+                <state relative-caret-position="774">
                   <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
                   <folding>
                     <element signature="e#0#31#0" expanded="true" />
@@ -217,11 +166,33 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ddpg_CirTurtleBot.py" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py">
+          <file leaf-file-name="dqn.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DQN/dqn.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="142">
-                  <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
+                <state relative-caret-position="3060">
+                  <caret line="179" column="70" lean-forward="false" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dqn_cirturtlebot.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1116">
+                  <caret line="84" column="83" lean-forward="false" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
+                  <folding>
+                    <element signature="e#22#33#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ddpg_CirTurtleBot2.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot2.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1260">
+                  <caret line="84" column="69" lean-forward="false" selection-start-line="84" selection-start-column="69" selection-end-line="84" selection-end-column="69" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -229,13 +200,37 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dppo_PlaneBall.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/PPO/PlaneBall/dppo_PlaneBall.py">
+          <file leaf-file-name="ddpg_CirTurtleBot.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="157">
-                  <caret line="250" column="40" lean-forward="false" selection-start-line="250" selection-start-column="40" selection-end-line="250" selection-end-column="40" />
+                <state relative-caret-position="1134">
+                  <caret line="77" column="103" lean-forward="false" selection-start-line="77" selection-start-column="103" selection-end-line="77" selection-end-column="103" />
+                  <folding>
+                    <element signature="e#0#18#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="dppo_CirTurtleBot.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="405">
+                  <caret line="256" column="111" lean-forward="true" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
                   <folding>
                     <element signature="e#407#416#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="gazebo_circuit2_turtlebot_lidar_nn.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="1404">
+                  <caret line="91" column="12" lean-forward="false" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+                  <folding>
+                    <element signature="e#0#10#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -244,12 +239,22 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="planeball-comparison.py" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/method_comparison/planeball-comparison.py">
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="cirturtlebot-comparison.py" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-419">
-                  <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+                <state relative-caret-position="477">
+                  <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="comparison.py" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-1278">
+                  <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -274,13 +279,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/environments/PlaneBall/planeball.py" />
-        <option value="$PROJECT_DIR$/common/callbacks.py" />
-        <option value="$USER_HOME$/baselines/baselines/common/cmd_util.py" />
-        <option value="$USER_HOME$/baselines/baselines/common/test_identity.py" />
-        <option value="$PROJECT_DIR$/PPO/ppo/play.py" />
-        <option value="$PROJECT_DIR$/PPO/ppo/train.py" />
-        <option value="$PROJECT_DIR$/PPO/ppo/agent.py" />
         <option value="$PROJECT_DIR$/PPO/Proximal-Policy-Optimization-in-Pytorch/test.py" />
         <option value="$PROJECT_DIR$/PPO/ppo_Pytorch/test.py" />
         <option value="$PROJECT_DIR$/PPO/ppo_Pytorch/model.py" />
@@ -306,15 +304,10 @@
         <option value="$PROJECT_DIR$/DQN/PlaneBall/dqn_planeball.py" />
         <option value="$PROJECT_DIR$/DQN/PlaneBall/target_net_comparison.py" />
         <option value="$PROJECT_DIR$/DQN/PlaneBall/learning_rate_comparison.py" />
-        <option value="$PROJECT_DIR$/common/core.py" />
         <option value="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot2.py" />
-        <option value="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" />
-        <option value="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" />
         <option value="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot3.py" />
         <option value="$PROJECT_DIR$/A3C/a3c.py" />
         <option value="$PROJECT_DIR$/PPO/a3c.py" />
-        <option value="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" />
-        <option value="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" />
         <option value="$PROJECT_DIR$/PPO/movan_ppo/dppo.py" />
         <option value="$PROJECT_DIR$/PPO/CartPole/dppo_CartPole2.py" />
         <option value="$PROJECT_DIR$/PPO/CartPole/dppo_CartPole.py" />
@@ -325,6 +318,18 @@
         <option value="$PROJECT_DIR$/PPO/PlaneBall/dppo_PlaneBall.py" />
         <option value="$PROJECT_DIR$/PPO/PlaneBall/comparison.py" />
         <option value="$PROJECT_DIR$/method_comparison/planeball-comparison.py" />
+        <option value="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" />
+        <option value="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" />
+        <option value="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" />
+        <option value="$PROJECT_DIR$/common/callbacks.py" />
+        <option value="$PROJECT_DIR$/DDPG/CirTurtleBot/test.py" />
+        <option value="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot2.py" />
+        <option value="$PROJECT_DIR$/common/core.py" />
+        <option value="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" />
+        <option value="$PROJECT_DIR$/DDPG/CirTurtleBot/comparison.py" />
+        <option value="$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py" />
+        <option value="$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py" />
+        <option value="$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py" />
       </list>
     </option>
   </component>
@@ -335,10 +340,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="994" />
-    <option name="y" value="47" />
-    <option name="width" value="890" />
-    <option name="height" value="1036" />
+    <option name="x" value="77" />
+    <option name="y" value="-4" />
+    <option name="width" value="888" />
+    <option name="height" value="1028" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -359,7 +364,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
-    <property name="last_opened_file_path" value="$USER_HOME$/keras-rl/rl" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -373,8 +378,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.planeball-comparison">
-    <configuration name="cartpole-comparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.cirturtlebot-comparison">
+    <configuration name="cirturtlebot-comparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -387,7 +392,26 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Thesis-RL" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/method_comparison/cartpole-comparison.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="comparison (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DQN/CirTurtleBot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Thesis-RL" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -400,89 +424,70 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DQN/CartPole" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDPG/CirTurtleBot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Thesis-RL" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DQN/CartPole/comparison.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDPG/CirTurtleBot/comparison.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="comparison (3)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="comparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PPO/PlaneBall" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PPO/CirTurtleBot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Thesis-RL" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PPO/PlaneBall/comparison.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="dppo_PlaneBall" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PPO/PlaneBall" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/DDPG/CirTurtleBot" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Thesis-RL" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PPO/PlaneBall/dppo_PlaneBall.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="planeball-comparison" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/method_comparison" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Thesis-RL" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/method_comparison/planeball-comparison.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/DDPG/CirTurtleBot/test.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.dppo_PlaneBall" />
-      <item index="1" class="java.lang.String" itemvalue="Python.cartpole-comparison" />
-      <item index="2" class="java.lang.String" itemvalue="Python.comparison (2)" />
-      <item index="3" class="java.lang.String" itemvalue="Python.comparison (3)" />
-      <item index="4" class="java.lang.String" itemvalue="Python.planeball-comparison" />
+      <item index="0" class="java.lang.String" itemvalue="Python.comparison (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test" />
+      <item index="2" class="java.lang.String" itemvalue="Python.cirturtlebot-comparison" />
+      <item index="3" class="java.lang.String" itemvalue="Python.comparison (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.comparison" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.planeball-comparison" />
-        <item index="1" class="java.lang.String" itemvalue="Python.comparison (3)" />
-        <item index="2" class="java.lang.String" itemvalue="Python.dppo_PlaneBall" />
-        <item index="3" class="java.lang.String" itemvalue="Python.cartpole-comparison" />
-        <item index="4" class="java.lang.String" itemvalue="Python.comparison (2)" />
+        <item index="0" class="java.lang.String" itemvalue="Python.cirturtlebot-comparison" />
+        <item index="1" class="java.lang.String" itemvalue="Python.comparison" />
+        <item index="2" class="java.lang.String" itemvalue="Python.comparison (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Python.test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.comparison (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -503,22 +508,22 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="994" y="47" width="1857" height="1092" extended-state="6" />
+    <frame x="77" y="-4" width="1855" height="1084" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44785276" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924336" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39366055" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24233128" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40797547" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.04528302" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="SciView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.93353784" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="SciView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.73312885" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991913" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997955" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32991913" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -576,74 +581,11 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="30" />
+      <option name="time" value="34" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/learning_rate_comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="44" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/memory_comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="14" column="57" lean-forward="false" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/ddpg_ContinuousCartPole2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="66" column="0" lean-forward="true" selection-start-line="66" selection-start-column="0" selection-end-line="66" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/ddpg_ContinuousCartPole.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="75" column="50" lean-forward="false" selection-start-line="75" selection-start-column="50" selection-end-line="75" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/gym/gym/envs/classic_control/pendulum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="36" column="8" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="36" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/PlaneBall/ddpg_PlaneBall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-656">
-          <caret line="27" column="13" lean-forward="false" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/PlaneBall/ddpg_PlaneBall 2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="86" column="0" lean-forward="false" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/load_weights.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="22" column="41" lean-forward="true" selection-start-line="22" selection-start-column="41" selection-end-line="22" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/PlaneBall/comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3330">
-          <caret line="185" column="73" lean-forward="true" selection-start-line="185" selection-start-column="73" selection-end-line="185" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DDPG/PlaneBall/ddpg_PlaneBall3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -693,13 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="177" column="3" lean-forward="false" selection-start-line="177" selection-start-column="3" selection-end-line="177" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -721,13 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="30" column="16" lean-forward="false" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
@@ -739,13 +667,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="78" column="81" lean-forward="false" selection-start-line="78" selection-start-column="59" selection-end-line="78" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DQN/dqn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="204" column="40" lean-forward="false" selection-start-line="204" selection-start-column="40" selection-end-line="204" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -764,20 +685,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/A3C/a3c.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/A3C/a3c_pendulum.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-985">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/A3C/a3c.py" />
+    <entry file="file://$PROJECT_DIR$/A3C/a3c_pendulum.py" />
     <entry file="file://$PROJECT_DIR$/DQN/DQN_CartPole.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="145">
@@ -787,28 +696,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/PPO/a3c_pendulum.py" />
     <entry file="file://$PROJECT_DIR$/PPO/a3c.py" />
-    <entry file="file://$PROJECT_DIR$/PPO/movan_ppo/dppo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="241" column="43" lean-forward="false" selection-start-line="241" selection-start-column="43" selection-end-line="241" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="62" column="31" lean-forward="false" selection-start-line="62" selection-start-column="31" selection-end-line="62" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/movan_ppo/dppo.py" />
     <entry file="file://$PROJECT_DIR$/PPO/CartPole/batch_size_comparison.py" />
-    <entry file="file://$PROJECT_DIR$/PPO/movan_ppo/simple_ppo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1572">
-          <caret line="111" column="77" lean-forward="true" selection-start-line="111" selection-start-column="77" selection-end-line="111" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/movan_ppo/simple_ppo.py" />
     <entry file="file://$PROJECT_DIR$/PPO/CartPole/dppo_CartPole3.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -837,51 +727,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/A3C/CartPole/A3C.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/callbacks.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1837">
-          <caret line="188" column="29" lean-forward="false" selection-start-line="188" selection-start-column="29" selection-end-line="188" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/ddpg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#31#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/core.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="285" column="33" lean-forward="false" selection-start-line="285" selection-start-column="8" selection-end-line="285" selection-end-column="33" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-            <element signature="e#7245#8479#0" expanded="false" />
-            <element signature="e#13668#21487#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/A3C/CartPole/A3C.py" />
     <entry file="file://$PROJECT_DIR$/DQN/CartPole/comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="115" column="0" lean-forward="true" selection-start-line="115" selection-start-column="0" selection-end-line="115" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -889,7 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-234">
           <caret line="112" column="33" lean-forward="false" selection-start-line="112" selection-start-column="33" selection-end-line="112" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -901,33 +750,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="61" column="32" lean-forward="true" selection-start-line="61" selection-start-column="32" selection-end-line="61" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PPO/PlaneBall/dppo_PlaneBall.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="250" column="40" lean-forward="false" selection-start-line="250" selection-start-column="40" selection-end-line="250" selection-end-column="40" />
-          <folding>
-            <element signature="e#407#416#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PPO/PlaneBall/comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="589">
           <caret line="159" column="16" lean-forward="true" selection-start-line="159" selection-start-column="16" selection-end-line="159" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,17 +761,170 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="522">
           <caret line="37" column="13" lean-forward="false" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/method_comparison/planeball-comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-419">
-          <caret line="73" column="0" lean-forward="true" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+          <caret line="73" column="0" lean-forward="false" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/PlaneBall/dppo_PlaneBall.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="250" column="40" lean-forward="false" selection-start-line="250" selection-start-column="40" selection-end-line="250" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environments/PlaneBall/planeball.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1854">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/dqn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3060">
+          <caret line="179" column="70" lean-forward="false" selection-start-line="179" selection-start-column="70" selection-end-line="179" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1116">
+          <caret line="84" column="83" lean-forward="false" selection-start-line="84" selection-start-column="83" selection-end-line="84" selection-end-column="83" />
+          <folding>
+            <element signature="e#22#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/CartPole/ddpg_ContinuousCartPole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-922">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="161" column="0" lean-forward="false" selection-start-line="194" selection-start-column="30" selection-end-line="194" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6462">
+          <caret line="370" column="28" lean-forward="false" selection-start-line="370" selection-start-column="28" selection-end-line="370" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1134">
+          <caret line="77" column="103" lean-forward="false" selection-start-line="77" selection-start-column="103" selection-end-line="77" selection-end-column="103" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/core.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4176">
+          <caret line="250" column="48" lean-forward="false" selection-start-line="250" selection-start-column="48" selection-end-line="250" selection-end-column="48" />
+          <folding>
+            <element signature="e#24#39#0" expanded="true" />
+            <element signature="e#7245#8479#0" expanded="false" />
+            <element signature="e#13669#21488#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="69" lean-forward="false" selection-start-line="84" selection-start-column="69" selection-end-line="84" selection-end-column="69" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/ddpg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="774">
+          <caret line="55" column="32" lean-forward="false" selection-start-line="55" selection-start-column="32" selection-end-line="55" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#31#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1404">
+          <caret line="91" column="12" lean-forward="false" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CartPole.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1242">
+          <caret line="211" column="102" lean-forward="true" selection-start-line="211" selection-start-column="102" selection-end-line="211" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="33" column="44" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DDPG/CirTurtleBot/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="566">
+          <caret line="50" column="35" lean-forward="false" selection-start-line="50" selection-start-column="35" selection-end-line="50" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="256" column="111" lean-forward="true" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
+          <folding>
+            <element signature="e#407#416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1278">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

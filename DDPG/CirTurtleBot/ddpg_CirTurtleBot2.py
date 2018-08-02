@@ -13,6 +13,9 @@ import environments
 
 
 from datetime import datetime
+
+#time.sleep(1800)
+#time.sleep(9000)
 timenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
@@ -77,9 +80,9 @@ random_process = OrnsteinUhlenbeckProcess(size=nb_actions, theta=.15, mu=0., sig
 agent = DDPGAgent(nb_actions=nb_actions, actor=actor, critic=critic, critic_action_input=action_input,
                   memory=memory, nb_steps_warmup_critic=1000, nb_steps_warmup_actor=1000, batch_size=32,
                   random_process=random_process, gamma=.99, target_model_update=1e-3)
-agent.compile([Adam(lr=0.00001, clipnorm=1.),Adam(lr=0.01, clipnorm=1.)], metrics=['mae'])
+agent.compile([Adam(lr=0.0001, clipnorm=1.),Adam(lr=0.001, clipnorm=1.)], metrics=['mae'])
 
-agent.fit(env, nb_steps=200000, visualize=False, callbacks=[callback3], verbose=2)
+agent.fit(env, nb_steps=200000, visualize=False, callbacks=[callback1], verbose=2)
 #time.sleep(1800)
 
 

@@ -80,9 +80,9 @@ if __name__ == '__main__':
 
     dqn2 = DQNAgent(model=model, nb_actions=nb_actions, memory=memory, batch_size=32, nb_steps_warmup=1000,
                     target_model_update=1e-2, policy=policy2)
-    dqn2.compile(Adam(lr=0.001), metrics=['mse'])
+    dqn2.compile(Adam(lr=0.01), metrics=['mse'])
     # dqn2.save_weights('save/dqn_blotzmann0.8_{}_weights.h5f'.format(ENV_NAME), overwrite=True)
-    history2 = dqn2.fit(env, nb_steps=200000, visualize=False, callbacks=[callback2], verbose=2)
+    history2 = dqn2.fit(env, nb_steps=200000, visualize=False, callbacks=[callback1], verbose=2)
 
     time.sleep(3600)
 

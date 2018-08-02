@@ -20,9 +20,9 @@ from datetime import datetime
 timenow = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
 
-ST_MAX = 200000
-EP_MAX = 3000
-EP_LEN = 300
+ST_MAX = 300000
+EP_MAX = 1000
+EP_LEN = 200
 
 #GAMMA = 0.9                 # reward discount factor
 #A_LR = 0.00001               # learning rate for actor
@@ -45,14 +45,13 @@ def save_data(filepath, data):
 
 
 class PPO(object):
-    def __init__(self, s_dim, a_dim, actor_lr, critic_lr, a_update_steps, c_update_steps, eps):
+    def __init__(self, s_dim, a_dim, actor_lr, critic_lr, update_steps, eps):
         self.sess = tf.Session()
         self.s_dim = s_dim
         self.a_dim = a_dim
         self.actor_lr = actor_lr
         self.critic_lr = critic_lr
-        self.actor_update_steps = a_update_steps
-        self.critic_update_steps = c_update_steps
+        self.update_steps = update_steps
         self.epsilon = eps
         self.tfs = tf.placeholder(tf.float32, [None, self.s_dim], 'state')
 
@@ -106,8 +105,8 @@ class PPO(object):
                 s, a, r = data[:, :self.s_dim], data[:, self.s_dim: self.s_dim + self.a_dim], data[:, -1:]
                 adv = self.sess.run(self.advantage, {self.tfs: s, self.tfdc_r: r})
                 # update actor and critic in a update loop
-                [self.sess.run(self.atrain_op, {self.tfs: s, self.tfa: a, self.tfadv: adv}) for _ in range(self.actor_update_steps)]
-                [self.sess.run(self.ctrain_op, {self.tfs: s, self.tfdc_r: r}) for _ in range(self.critic_update_steps)]
+                [self.sess.run(self.atrain_op, {self.tfs: s, self.tfa: a, self.tfadv: adv}) for _ in range(self.update_steps)]
+                [self.sess.run(self.ctrain_op, {self.tfs: s, self.tfdc_r: r}) for _ in range(self.update_steps)]
                 UPDATE_EVENT.clear()        # updating finished
                 GLOBAL_UPDATE_COUNTER = 0   # reset counter
                 ROLLING_EVENT.set()         # set roll-out available
@@ -115,10 +114,10 @@ class PPO(object):
     def _build_anet(self, name, trainable):
         with tf.variable_scope(name):
             l1 = tf.layers.dense(self.tfs, 24, tf.nn.relu, trainable=trainable)
-            l2 = tf.layers.dense(l1, 24, tf.nn.relu, trainable=trainable)
-            l3 = tf.layers.dense(l2, 24, tf.nn.relu, trainable=trainable)
-            mu = 2 * tf.layers.dense(l3, self.a_dim, tf.nn.tanh, trainable=trainable)
-            sigma = tf.layers.dense(l3, self.a_dim, tf.nn.softplus, trainable=trainable)
+            l1 = tf.layers.dense(l1, 24, tf.nn.relu, trainable=trainable)
+            l1 = tf.layers.dense(l1, 24, tf.nn.relu, trainable=trainable)
+            mu = 2 * tf.layers.dense(l1, self.a_dim, tf.nn.tanh, trainable=trainable)
+            sigma = tf.layers.dense(l1, self.a_dim, tf.nn.softplus, trainable=trainable)
             norm_dist = tf.distributions.Normal(loc=mu, scale=sigma)
         params = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES, scope=name)
         return norm_dist, params
@@ -126,9 +125,7 @@ class PPO(object):
     def choose_action(self, s):
         s = s[np.newaxis, :]
         a = self.sess.run(self.sample_op, {self.tfs: s})[0]
-        #print(a)
-        return np.clip(a, -0.33, 0.33)
-        #return a
+        return np.clip(a, -1, 1)
 
     def get_v(self, s):
         if s.ndim < 2: s = s[np.newaxis, :]
@@ -151,13 +148,6 @@ class Worker(object):
             s = self.env.reset()
             ep_r = 0
             buffer_s, buffer_a, buffer_r = [], [], []
-
-            if GLOBAL_STEPS >= ST_MAX or abs(GLOBAL_STEPS - ST_MAX) < 100:  # stop training
-                # if abs(GLOBAL_STEPS - ST_MAX) < 400:
-
-                COORD.request_stop()
-                break
-
             for t in range(EP_LEN):
                 duration_begin = timeit.default_timer()
                 if not ROLLING_EVENT.is_set():                  # while global PPO is updating
@@ -199,7 +189,11 @@ class Worker(object):
                         ROLLING_EVENT.clear()       # stop collecting data
                         UPDATE_EVENT.set()          # globalPPO update
 
+                    if GLOBAL_STEPS >= ST_MAX:         # stop training
+                    #if abs(GLOBAL_STEPS - ST_MAX) < 400:
 
+                        COORD.request_stop()
+                        #break
                 #CSN
                 #print('GLOBAL_UPDATE_COUNTER:{}'.format(GLOBAL_UPDATE_COUNTER))
                 if done:
@@ -217,7 +211,7 @@ class Worker(object):
             history['discount_r']=GLOBAL_RUNNING_R
             #print('{0:.1f}%'.format(GLOBAL_EP/EP_MAX*100), '|W%i' % self.wid,  '|Ep_r: %.2f' % ep_r,)
             print('|W%i' % self.wid, 'steps:{}'.format(GLOBAL_STEPS),'episode:{}'.format(GLOBAL_EP), 'episode steps:{}'.format(t+1),  '|Ep_r: %.2f' % ep_r, 'duration:{}'.format(duration))
-            save_data('history3_{}'.format(timenow), history)
+            save_data('history5_{}'.format(timenow), history)
 
             #DURATION += duration
             #print('d:{}'.format(DURATION))
@@ -245,22 +239,22 @@ def test(game, render):
 
 
 if __name__ == '__main__':
-    #try:
+
     d_begin = timeit.default_timer()
 
-    #GAME = 'ContinuousCartPole-v0'
+    GAME = 'ContinuousCartPole-v0'
     #GAME = 'PlaneBall-v0'
-    GAME = 'GazeboCircuit2TurtlebotLidarNn-v1'
+    # GAME = 'GazeboCircuit2TurtlebotLidarNn-v1'
 
-    N_WORKER = 2  # parallel workers
+    N_WORKER = 4  # parallel workers
 
-    GLOBAL_PPO = PPO(s_dim=20, a_dim=1, actor_lr=0.00001, critic_lr=0.0001, a_update_steps=10, c_update_steps=1, eps=0.2)
+    GLOBAL_PPO = PPO(s_dim=4, a_dim=1, actor_lr=0.0001, critic_lr=0.00002, update_steps=10, eps=0.2)
 
     UPDATE_EVENT, ROLLING_EVENT = threading.Event(), threading.Event()
     UPDATE_EVENT.clear()            # not update now
     ROLLING_EVENT.set()             # start to roll out
     workers = [Worker(wid=i, env=GAME, ppo=GLOBAL_PPO, gamma=0.99, batch_size=32) for i in range(N_WORKER)]
-
+    
     GLOBAL_UPDATE_COUNTER, GLOBAL_EP, GLOBAL_STEPS= 0, 0, 0
     GLOBAL_RUNNING_R = []
     history={'episode':[],'steps':[],'reward':[],'discount_r':[], 'ep_steps':[], 'duration':[]}
@@ -278,13 +272,10 @@ if __name__ == '__main__':
     threads[-1].start()
     COORD.join(threads)
 
-
-#except KeyboardInterrupt:
-
     d = timeit.default_timer() - d_begin
     history['duration_total'] = d
-    save_data('history3_{}'.format(timenow), history)
+    save_data('history5_{}'.format(timenow), history)
     print('dd:{}'.format(history['duration_total']))
 
-    #test(GAME, True)
+    test(GAME, False)
 
