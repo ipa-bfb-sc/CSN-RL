@@ -248,7 +248,7 @@ class Agent(object):
                     # CartPole termination:
                     #if (self.episode_reward>=199):
                     # CirTurtleBot termination:
-                    if (self.episode_reward >= 600):
+                    if (self.episode_reward >= 2000):
                     # PlaneBall termination:
                     #if (self.episode_reward >= 800):
                         self.num_streaks += 1
