@@ -1,4 +1,4 @@
-# Thesis-RL
+# CSN-RL
 Algorithms source of Shengnan's thesis.
 
 The thesis topic is: Comparing Deep Reinforcement Learning Methods for Engineering Applications
