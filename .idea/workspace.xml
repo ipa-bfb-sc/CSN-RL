@@ -1,26 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="efb01338-0aaa-4d9b-a0d9-bbb2ce6436a4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/ddpg_CirTurtleBot.py" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Actor.json" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Actor.json" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Critic.json" afterPath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/Critic.json" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history2_2018-07-20 15:26:54" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history3_2018-07-20 22:36:26" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history3_2018-07-20 23:39:41" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/CirTurtleBot/save/history4_2018-07-21 00:03:40" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DDPG/movan_ddpg.py" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/comparison.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/dqn_cirturtlebot.py" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/NNmodel1.json" afterPath="$PROJECT_DIR$/DQN/CirTurtleBot/save/NNmodel1.json" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/nhistory3_2018-07-19 21:56:31" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/nhistory3_2018-07-19 22:21:33" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/DQN/CirTurtleBot/save/pics/ddpg_cirturtlebot_reward.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py" afterPath="$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py" />
-      <change beforePath="$PROJECT_DIR$/common/core.py" afterPath="$PROJECT_DIR$/common/core.py" />
-      <change beforePath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" afterPath="$PROJECT_DIR$/environments/CirTurtleBot/gazebo_circuit2_turtlebot_lidar_nn.py" />
-    </list>
+    <list default="true" id="efb01338-0aaa-4d9b-a0d9-bbb2ce6436a4" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -216,7 +197,7 @@
             <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="405">
-                  <caret line="256" column="111" lean-forward="true" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
+                  <caret line="256" column="111" lean-forward="false" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
                   <folding>
                     <element signature="e#407#416#0" expanded="true" />
                   </folding>
@@ -244,7 +225,7 @@
             <entry file="file://$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="477">
-                  <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+                  <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -254,7 +235,7 @@
             <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-1278">
-                  <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+                  <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#18#0" expanded="true" />
                   </folding>
@@ -509,7 +490,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="-4" width="1855" height="1084" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -903,7 +883,7 @@
     <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/dppo_CirTurtleBot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
-          <caret line="256" column="111" lean-forward="true" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
+          <caret line="256" column="111" lean-forward="false" selection-start-line="256" selection-start-column="111" selection-end-line="256" selection-end-column="111" />
           <folding>
             <element signature="e#407#416#0" expanded="true" />
           </folding>
@@ -913,7 +893,7 @@
     <entry file="file://$PROJECT_DIR$/PPO/CirTurtleBot/comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1278">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
+          <caret line="58" column="0" lean-forward="false" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -923,7 +903,7 @@
     <entry file="file://$PROJECT_DIR$/method_comparison/cirturtlebot-comparison.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="477">
-          <caret line="138" column="0" lean-forward="true" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
